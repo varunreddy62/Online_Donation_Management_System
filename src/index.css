@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-dark font-sans antialiased;
+  }
+
+  /* Override select option backgrounds for light theme */
+  select option {
+    @apply bg-white text-dark;
+  }
+}
+
+@layer components {
+  /* Card primitives */
+  .card {
+    @apply bg-white border border-neutral/60 rounded-2xl shadow-card transition-shadow duration-200 hover:shadow-card-hover;
+  }
+
+  .card-flat {
+    @apply bg-white border border-neutral/60 rounded-2xl;
+  }
+
+  /* Input base */
+  .input-base {
+    @apply w-full bg-white border border-neutral rounded-lg px-4 py-2.5
+           text-dark placeholder-dark/40 focus:outline-none focus:ring-2
+           focus:ring-primary/50 focus:border-primary transition-all duration-200;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply px-4 py-2 bg-primary hover:bg-secondary text-white rounded-lg
+           font-medium shadow-sm transition-all duration-200
+           active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white hover:bg-background text-dark rounded-lg
+           font-medium border border-neutral transition-all duration-200
+           active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-accent {
+    @apply px-4 py-2 bg-accent hover:bg-accent/90 text-white rounded-lg
+           font-medium shadow-sm transition-all duration-200
+           active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  }
+}
