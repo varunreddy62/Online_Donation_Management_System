@@ -117,7 +117,7 @@ export default function DashboardPage() {
               <thead>
                 <tr className="bg-secondary/20 text-dark/60">
                   <th className="px-6 py-4 font-medium text-sm">Donor</th>
-                  <th className="px-6 py-4 font-medium text-sm">Amount</th>
+                  <th className="p x-6 py-4 font-medium text-sm">Amount</th>
                   <th className="px-6 py-4 font-medium text-sm">Date</th>
                 </tr>
               </thead>
